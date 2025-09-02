@@ -1,0 +1,28 @@
+[package]
+name = "rust_ios_hello"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "rust_ios_hello"
+path = "src/main.rs"
+
+[dependencies]
+bevy = { version = "0.16" , default-features = false, features = [
+    "bevy_winit",
+    "bevy_render",
+    "bevy_core_pipeline",
+    "bevy_sprite",
+    "bevy_text",
+    "bevy_ui",
+    "bevy_asset",
+    "multi_threaded",
+    "png",
+    "default_font",
+] }
+
+# iOS specific dependencies
+[target.'cfg(target_os = "ios")'.dependencies]
+objc = "0.2"
+core-foundation = "0.9"
+core-graphics = "0.23"

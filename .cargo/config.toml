@@ -1,0 +1,15 @@
+[build]
+# Default target for iOS simulator
+target = "aarch64-apple-ios-sim"
+# Allow implicit autoref for local bevy development
+rustflags = ["-A", "dangerous_implicit_autorefs"]
+
+[target.aarch64-apple-ios-sim]
+# iOS Simulator runner - uses pre-built Rust binary for host architecture
+runner = "./target/aarch64-apple-darwin/debug/ios-runner"
+
+[target.aarch64-apple-ios]
+# iOS Device runner (when connected) - NO SHELL SCRIPTS
+runner = [
+    "echo", "📱 iOS Device deployment not configured - use Xcode or ios-deploy"
+]
