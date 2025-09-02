@@ -8,18 +8,19 @@ name = "rust_ios_hello"
 path = "src/main.rs"
 
 [dependencies]
-bevy = { version = "0.16" , default-features = false, features = [
-    "bevy_winit",
-    "bevy_render",
-    "bevy_core_pipeline",
-    "bevy_sprite",
-    "bevy_text",
-    "bevy_ui",
-    "bevy_asset",
-    "multi_threaded",
-    "png",
-    "default_font",
-] }
+bevy = { git = "https://github.com/bevyengine/bevy.git", rev = "335e39f" }
+#bevy = { git = " , default-features = false, features = [
+#    "bevy_winit",
+#    "bevy_render",
+#    "bevy_core_pipeline",
+#    "bevy_sprite",
+#    "bevy_text",
+#    "bevy_ui",
+#    "bevy_asset",
+#    "multi_threaded",
+#    "png",
+#    "default_font",
+#] }
 
 # iOS specific dependencies
 [target.'cfg(target_os = "ios")'.dependencies]

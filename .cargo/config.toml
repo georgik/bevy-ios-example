@@ -5,8 +5,8 @@ target = "aarch64-apple-ios-sim"
 rustflags = ["-A", "dangerous_implicit_autorefs"]
 
 [target.aarch64-apple-ios-sim]
-# iOS Simulator runner - uses pre-built Rust binary for host architecture
-runner = "./target/aarch64-apple-darwin/debug/ios-runner"
+# No custom runner needed - build.rs handles simulator deployment
+# Direct simulator execution happens automatically during build
 
 [target.aarch64-apple-ios]
 # iOS Device runner (when connected) - NO SHELL SCRIPTS

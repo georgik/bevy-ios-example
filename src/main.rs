@@ -54,7 +54,7 @@ fn main() {
         .add_plugins(DefaultPlugins.set(WindowPlugin {
             primary_window: Some(Window {
                 title: "Rust GUI on iOS".to_string(),
-                resolution: WindowResolution::new(375.0, 667.0), // iPhone resolution
+                resolution: WindowResolution::new(375, 667), // iPhone resolution
                 resizable: false,
                 ..default()
             }),
